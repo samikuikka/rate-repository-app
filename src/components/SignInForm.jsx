@@ -29,11 +29,11 @@ const SignInForm = ({onSubmit}) => {
       <View style={styles.container}>
           <FormikTextInput name="username" placeholder="Username" />
           <FormikTextInput name="password" placeholder="Password" secureTextEntry/>
-          <View style={styles.buttonContainer}>
-              <Pressable onPress={onSubmit}>
+          <Pressable onPress={onSubmit}>
+            <View style={styles.buttonContainer}>
                   <Text fontWeight='bold' style={{color: 'white'}}>Sign in</Text>
-              </Pressable>
-          </View>
+            </View>
+          </Pressable>
       </View>
   );
 };
