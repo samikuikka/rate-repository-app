@@ -22,13 +22,24 @@ const styles = StyleSheet.create({
     fontWeight: theme.fontWeights.bold,
   },
   appBarText: {
-      color: theme.appBar.text,
-      fontWeight: theme.fontWeights.bold,
-      flexGrow: 1
+    color: theme.appBar.text,
+    fontWeight: theme.fontWeights.bold,
+    flexGrow: 1
+  },
+  languageTag: {
+    alignSelf: "flex-start",
+    borderWidth: 1,
+    borderRadius: 5,
+    marginTop: 5,
+    marginBottom: 5,
+    borderColor: theme.colors.primary,
+    overflow: 'hidden',
+    backgroundColor: theme.colors.primary,
+    color: 'white',
   }
 });
 
-const Text = ({ color, fontSize, fontWeight, style, appBar, ...props }) => {
+const Text = ({ color, fontSize, fontWeight, style, appBar, languageTag,  ...props }) => {
   const textStyle = [
     styles.text,
     color === 'textSecondary' && styles.colorTextSecondary,
@@ -36,6 +47,7 @@ const Text = ({ color, fontSize, fontWeight, style, appBar, ...props }) => {
     fontSize === 'subheading' && styles.fontSizeSubheading,
     fontWeight === 'bold' && styles.fontWeightBold,
     appBar && styles.appBarText,
+    languageTag && styles.languageTag,
     style,
   ];
 
