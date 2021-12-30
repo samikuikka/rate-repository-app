@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,  StyleSheet, Pressable } from 'react-native';
+import { View,  StyleSheet, Pressable,  ScrollView } from 'react-native';
 import Constants from 'expo-constants';
 import Text from './Text';
 import theme from '../theme';
@@ -17,12 +17,17 @@ const styles = StyleSheet.create({
   },
   flexItem: {
       flexGrow: 1,
+      marginRight: 10
+  },
+  scrollView: {
+    
   }
 });
 
 const AppBar = () => {
   return (
     <View style={styles.container}>
+      <ScrollView horizontal >
         <Pressable style={styles.flexItem} onPress={() => console.log("Click!")}>
             <Link to="/">
               <Text appBar>Repositories</Text>
@@ -33,6 +38,7 @@ const AppBar = () => {
               <Text appBar>Sign in</Text>
             </Link>
         </Pressable>
+      </ScrollView>
     </View>
   );
 };
