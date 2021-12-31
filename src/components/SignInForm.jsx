@@ -21,10 +21,29 @@ const styles = StyleSheet.create({
         padding: 10,
         margin: 6,
     },
+    disapledButton: {
+        backgroundColor: theme.colors.textSecondary,
+        borderColor: theme.colors.textSecondary
+    }
     
 })
 
-const SignInForm = ({onSubmit}) => {
+const SignInForm = ({onSubmit, isValid}) => {
+
+if(!isValid) {
+    return (
+        <View style={styles.container}>
+            <FormikTextInput name="username" placeholder="Username" />
+            <FormikTextInput name="password" placeholder="Password" secureTextEntry/>
+            <Pressable onPress={onSubmit} disabled>
+                <View style={[styles.buttonContainer, styles.disapledButton]}>
+                    <Text fontWeight='bold' style={{color: 'white'}}>Sign in</Text>
+                </View>
+            </Pressable>
+        </View>
+    );
+}
+
   return (
       <View style={styles.container}>
           <FormikTextInput name="username" placeholder="Username" />
