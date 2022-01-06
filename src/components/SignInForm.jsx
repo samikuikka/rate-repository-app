@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
 })
 
 const SignInForm = ({onSubmit, isValid}) => {
-
 if(!isValid) {
     return (
         <View style={styles.container}>
@@ -43,7 +42,6 @@ if(!isValid) {
         </View>
     );
 }
-
   return (
       <View style={styles.container}>
           <FormikTextInput name="username" placeholder="Username" />
