@@ -46,7 +46,7 @@ if(!isValid) {
       <View style={styles.container}>
           <FormikTextInput name="username" placeholder="Username" />
           <FormikTextInput name="password" placeholder="Password" secureTextEntry/>
-          <Pressable onPress={onSubmit}>
+          <Pressable onPress={onSubmit} testID="submit:button">
             <View style={styles.buttonContainer}>
                   <Text fontWeight='bold' style={{color: 'white'}}>Sign in</Text>
             </View>
