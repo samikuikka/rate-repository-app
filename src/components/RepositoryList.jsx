@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FlatList, View, StyleSheet } from 'react-native';
 import RepositoryItem from './RepositoryItem';
 import useRepositories from '../hooks/useRepositories';
-import { Text } from 'react-native';
+import Constants  from 'expo-constants';
 
 
 const styles = StyleSheet.create({

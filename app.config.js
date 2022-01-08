@@ -31,7 +31,7 @@ export default {
     },
   extra: {
       env: process.env.ENV,
-      APOLLO_URI: "http://192.168.1.12:5000/graphql"
+      APOLLO_URI: process.env.APOLLO_URI
     },
 }
 
