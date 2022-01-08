@@ -42,16 +42,16 @@ const RepositoryItem = ({description, forksCount, fullName, id, language, ownerA
                     source={{uri: `${ownerAvatarUrl}`}}
                 />
                 <View style={styles.columnContainer}>
-                    <Text fontWeight="bold" >{fullName}</Text>
-                    <Text color="textSecondary" flexText>{description}</Text>
-                    <Text languageTag>{language}</Text>
+                    <Text fontWeight="bold" testID={`${id}:fullName`}>{fullName}</Text>
+                    <Text color="textSecondary" testID={`${id}:description`} flexText>{description}</Text>
+                    <Text testID={`${id}:language`} languageTag>{language}</Text>
                 </View>
             </View>
             <View style={styles.bottomContainer}>
-                <ItemStat title="Stars" count={stargazersCount} />
-                <ItemStat title="Forks" count={forksCount} />
-                <ItemStat title="Reviews" count={reviewCount} />
-                <ItemStat title="Rating" count={ratingAverage} />
+                <ItemStat title="Stars" count={stargazersCount}  id={id}/>
+                <ItemStat title="Forks" count={forksCount} id={id}/>
+                <ItemStat title="Reviews" count={reviewCount} id={id}/>
+                <ItemStat title="Rating" count={ratingAverage} id={id}/>
             </View>
         </View>
     );

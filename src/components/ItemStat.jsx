@@ -14,14 +14,14 @@ const styles = StyleSheet.create({
     }
 })
 
-const ItemStat = ({title, count}) => {
+const ItemStat = ({title, count, id}) => {
 
     if(count > 1000) {
         const number = count / 1000;
         const rounded = Math.round(number * 10) / 10;
         return(
             <View styles={styles.container}>
-                <Text fontWeight="bold">{rounded}k</Text>
+                <Text fontWeight="bold" testID={`${id}:${title}`}>{rounded}k</Text>
                 <Text color="textSecondary" style={styles.item}>{title}</Text>
             </View>
         );
@@ -29,7 +29,7 @@ const ItemStat = ({title, count}) => {
 
     return(
         <View styles={styles.container}>
-            <Text fontWeight="bold" style={styles.item}>{count}</Text>
+            <Text fontWeight="bold" style={styles.item} testID={`${id}:${title}`}>{count}</Text>
             <Text color="textSecondary" style={styles.item}>{title}</Text>
         </View>
     );
