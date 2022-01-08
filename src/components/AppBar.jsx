@@ -37,8 +37,6 @@ const AppBar = () => {
     await authStorage.removeAccessToken();
     apolloClient.resetStore();
   }
- 
-  console.log(data)
 
   return (
     <View style={styles.container}>
@@ -55,7 +53,7 @@ const AppBar = () => {
           }
           {data && !data.authorizedUser && 
           <Pressable style={styles.flexItem} onPress={() => console.log('click')}>
-            <Link to="signIn">
+            <Link to="/signIn">
               <Text appBar>Sign in</Text>
             </Link>
           </Pressable>

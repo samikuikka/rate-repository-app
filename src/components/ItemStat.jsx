@@ -6,11 +6,11 @@ const styles = StyleSheet.create({
     container: {
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     item: {
         flex: 1,
-        alignSelf: 'center'
+        alignSelf: 'center',
     }
 })
 

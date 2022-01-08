@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 
 const ItemSeparator = () => <View style={styles.separator} />;
 
-const renderItem = ({item}) => (
+export const renderItem = ({item}) => (
   <RepositoryItem 
       description={item.description}
       forksCount={item.forksCount}
@@ -24,7 +24,9 @@ const renderItem = ({item}) => (
       ownerAvatarUrl={item.ownerAvatarUrl}
       ratingAverage={item.ratingAverage}
       reviewCount={item.reviewCount}
-      stargazersCount={item.stargazersCount} />
+      stargazersCount={item.stargazersCount}
+      url={item.url}
+      />
 );
 
 
