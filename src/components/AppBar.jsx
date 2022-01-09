@@ -71,12 +71,17 @@ const AppBar = () => {
             <Link to="/">
               <Text appBar>Repositories</Text>
             </Link>
-          </Pressable>       
+          </Pressable>    
           <Pressable style={styles.flexItem} onPress={() => console.log('click')}>
             <Link to="/signIn">
               <Text appBar>Sign in</Text>
             </Link>
           </Pressable>
+          <Pressable style={styles.flexItem} onPress={() => console.log("Click!")}>
+            <Link to="/signUp">
+              <Text appBar>Sign up</Text>
+            </Link>
+          </Pressable> 
       </ScrollView>
     </View>
   );
