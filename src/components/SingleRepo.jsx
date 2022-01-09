@@ -29,6 +29,7 @@ const renderReview = ({item}) => {
 const SingleRepo = () => {
     const { id } = useParams();
     const { loading, data } = useQuery(REPOSITORY, {
+        fetchPolicy: 'cache-and-network',
         variables: { id: id }
     })
     if(loading) return null
